@@ -3,7 +3,7 @@
 #include "DirectXHook.h"
 #include "Logger.h"
 #include "MemoryUtils.h"
-#include "Example/Example.h"
+#include "GTAVEnhanced.h"
 #include "UniversalProxyDLL.h"
 
 static Logger logger{ "DllMain" };
@@ -27,8 +27,8 @@ DWORD WINAPI HookThread(LPVOID lpParam)
 {
 	static Renderer renderer;
 	static DirectXHook dxHook(&renderer);
-	static Example example;
-	dxHook.AddRenderCallback(&example);
+	static GTAVEnhanced GTAVEnhanced;
+	dxHook.AddRenderCallback(&GTAVEnhanced);
 	dxHook.Hook();
 	return 0;
 }

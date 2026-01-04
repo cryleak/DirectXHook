@@ -158,7 +158,8 @@
       <AdditionalDependencies>d3d11.lib;d3d12.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY "C:\Programming\Github repositories\DirectXHook\x64\Release\dinput8.dll" "G:\SteamLibrary\steamapps\common\MonsterHunterRise\reframework\plugins\RiseDpsMeter.dll"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,22 +183,17 @@
       <AdditionalDependencies>d3d11.lib;d3d12.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY "C:\Programming\Github repositories\DirectXHook\x64\Release\dinput8.dll" "F:\SteamLibrary\steamapps\common\ELDEN RING\Game\dinput8.dll"
-XCOPY /y "C:\Programming\Github repositories\DirectXHook\assets\hook_textures" "F:\SteamLibrary\steamapps\common\ELDEN RING\Game\hook_textures\"
-XCOPY /y "C:\Programming\Github repositories\DirectXHook\assets\hook_fonts" "F:\SteamLibrary\steamapps\common\ELDEN RING\Game\hook_fonts\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="overlays\Example\Example.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="overlays\PauseTheGame\PauseTheGame.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="overlays\RiseDpsMeter\RiseDpsMeter.cpp" />
+    <ClCompile Include="include\keymap.cpp" />
+    <ClCompile Include="overlays\GTAVEnhanced.cpp" />
+    <ClCompile Include="overlays\macros.cpp" />
     <ClCompile Include="src\DirectXHook.cpp" />
     <ClCompile Include="src\DllMain.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
@@ -214,18 +210,18 @@ XCOPY /y "C:\Programming\Github repositories\DirectXHook\assets\hook_fonts" "F:\
     <ClInclude Include="include\DirectXHook.h" />
     <ClInclude Include="include\ID3DRenderer.h" />
     <ClInclude Include="include\IRenderCallback.h" />
+    <ClInclude Include="include\keymap.h" />
     <ClInclude Include="include\Logger.h" />
     <ClInclude Include="include\MemoryUtils.h" />
     <ClInclude Include="include\OverlayFramework.h" />
     <ClInclude Include="include\Renderer.h" />
     <ClInclude Include="include\UniversalProxyDLL.h" />
-    <ClInclude Include="overlays\Example\Example.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="overlays\PauseTheGame\PauseTheGame.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="overlays\RiseDpsMeter\RiseDpsMeter.h" />
+    <ClInclude Include="overlays\GTAVEnhanced.h" />
+    <ClInclude Include="overlays\macros.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DirectXHook.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

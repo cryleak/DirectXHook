@@ -1,7 +1,5 @@
 #include "DirectXHook.h"
-#include "RiseDpsMeter/RiseDpsMeter.h"
-#include "Example/Example.h"
-#include "PauseTheGame/PauseTheGame.h"
+#include "GTAVEnhanced.h"
 
 static DirectXHook* hookInstance = nullptr;
 

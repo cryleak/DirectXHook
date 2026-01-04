@@ -12,15 +12,6 @@
     <Filter Include="Overlays">
       <UniqueIdentifier>{4e722490-89b1-476c-8f11-f855725e5074}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Overlays\Example">
-      <UniqueIdentifier>{8a12ed8f-5e32-450f-8ec9-985d3e5cde32}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Overlays\RiseDpsMeter">
-      <UniqueIdentifier>{f65c6413-9861-46d0-ac93-cc3206db7958}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Overlays\PauseTheGame">
-      <UniqueIdentifier>{49480136-b55a-468a-b6ab-1720b97d7141}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -35,14 +26,14 @@
     <ClCompile Include="src\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="overlays\Example\Example.cpp">
-      <Filter>Overlays\Example</Filter>
+    <ClCompile Include="overlays\GTAVEnhanced.cpp">
+      <Filter>Overlays</Filter>
     </ClCompile>
-    <ClCompile Include="overlays\PauseTheGame\PauseTheGame.cpp">
-      <Filter>Overlays\PauseTheGame</Filter>
+    <ClCompile Include="overlays\macros.cpp">
+      <Filter>Overlays</Filter>
     </ClCompile>
-    <ClCompile Include="overlays\RiseDpsMeter\RiseDpsMeter.cpp">
-      <Filter>Overlays\RiseDpsMeter</Filter>
+    <ClCompile Include="include\keymap.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,20 +60,26 @@
     <ClInclude Include="include\Renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="overlays\Example\Example.h">
-      <Filter>Overlays\Example</Filter>
-    </ClInclude>
-    <ClInclude Include="overlays\RiseDpsMeter\RiseDpsMeter.h">
-      <Filter>Overlays\RiseDpsMeter</Filter>
-    </ClInclude>
-    <ClInclude Include="overlays\PauseTheGame\PauseTheGame.h">
-      <Filter>Overlays\PauseTheGame</Filter>
-    </ClInclude>
     <ClInclude Include="include\ID3DRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\UniversalProxyDLL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="overlays\GTAVEnhanced.h">
+      <Filter>Overlays</Filter>
+    </ClInclude>
+    <ClInclude Include="include\keymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="overlays\macros.h">
+      <Filter>Overlays</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DirectXHook.rc" />
   </ItemGroup>
 </Project>
